@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { formEmits } from './props'
+
+const emit = defineEmits(formEmits)
+
 const handleSubmit = () => {
-  console.log('Form submitted')
+  emit('submit')
 }
 </script>
 

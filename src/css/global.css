@@ -3,7 +3,6 @@
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
-  box-sizing: border-box;
 
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
@@ -13,6 +12,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --animation-duration: 0.3s;
 }
 
 /* a {

@@ -12,7 +12,7 @@ const password = ref('')
 
 <template>
   <Card max-width="600px">
-    <Form>
+    <Form @submit="$router.push({ name: 'home' })">
       <Input v-model="email" placeholder="Digite o seu e-mail" label="Teste" />
       <Input v-model="password" placeholder="Digite a sua senha" />
       <Typography>{{ email }}</Typography>
