@@ -24,6 +24,7 @@ onMounted(() => {
 
 <style scoped>
 .card-container {
+  position: relative;
   width: fit-content;
 }
 </style>

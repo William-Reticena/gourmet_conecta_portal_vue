@@ -5,7 +5,13 @@ import { onMounted, ref } from 'vue'
 const menuItemRef = ref<HTMLDivElement | null>(null)
 
 const observer = new ResizeObserver((entries) => {
-  if (entries[0].contentRect.width < 90) {
+  if (entries[0].contentRect.width < 180) {
+    entries[0].target.children[1].classList.add('will-hide')
+  } else {
+    entries[0].target.children[1].classList.remove('will-hide')
+  }
+
+  if (entries[0].contentRect.width < 40) {
     entries[0].target.children[1].classList.add('hidden')
   } else {
     entries[0].target.children[1].classList.remove('hidden')
@@ -24,7 +30,9 @@ onMounted(() => {
     <div class="menu-item-icon">
       <CallMadeIcon />
     </div>
-    <div class="menu-item-label">Chamadas Recebidas</div>
+    <div class="menu-item-label">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -33,15 +41,30 @@ onMounted(() => {
   align-items: center;
   cursor: pointer;
   display: flex;
+  min-height: 3rem;
   padding: 0.5rem 1rem;
 }
 
 .menu-item-icon {
-  margin-right: 0.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 14px;
 }
 
 .menu-item-label {
   display: block;
+  line-height: 1.3;
+  opacity: 1;
+  text-overflow: ellipsis;
+  transition: opacity var(--animation-duration);
+}
+
+.menu-item-label.will-hide {
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 9.375rem;
 }
 
 .menu-item-label.hidden {

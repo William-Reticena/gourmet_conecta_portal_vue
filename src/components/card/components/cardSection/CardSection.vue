@@ -11,7 +11,6 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 1em;
   padding: 1em;
 }
 </style>

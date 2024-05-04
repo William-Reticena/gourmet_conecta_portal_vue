@@ -4,7 +4,7 @@
   font-size: 16px;
   font-weight: 400;
 
-  /* color-scheme: light dark; */
+  /* color-scheme: dark; */
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
 
@@ -29,6 +29,7 @@
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -75,8 +76,8 @@ button:focus-visible {
   padding: 2rem;
   text-align: center;
 }
-
-@media (prefers-color-scheme: light) {
+*/
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -86,5 +87,18 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  button {
+    background-color: #1a1a1a;
   }
 } */
