@@ -12,6 +12,7 @@ export default defineConfig({
       '@layouts': '/src/layouts',
       '@components': '/src/components',
       '@routes': '/src/routes',
+      '@assets': '/src/assets',
     },
   },
 })

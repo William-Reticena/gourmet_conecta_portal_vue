@@ -41,18 +41,22 @@ onUpdated(() => {
 
 <template>
   <div ref="drawerRef" class="drawer-container" tabindex="-1">
-    <MenuItem> Ver restaurantes </MenuItem>
+    <MenuItem> Início </MenuItem>
     <MenuItem> Meus pedidos </MenuItem>
-    <MenuItem> Virar Premium </MenuItem>
+    <MenuItem> Meu perfil </MenuItem>
   </div>
 </template>
 
 <style scoped>
 .drawer-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  height: calc(100vh - var(--content-viewing-padding-top));
   position: fixed;
-  top: 0;
+  top: var(--content-viewing-padding-top);
   transition: width var(--animation-duration);
   width: 15.625rem;
   z-index: 1000;

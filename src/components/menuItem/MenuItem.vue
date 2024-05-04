@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CallMadeIcon from '@/assets/icons/CallMade.vue'
+import HomeIcon from '@/assets/icons/HomeFilled.vue'
 import { onMounted, ref } from 'vue'
 
 const menuItemRef = ref<HTMLDivElement | null>(null)
@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <div ref="menuItemRef" class="menu-item-container">
     <div class="menu-item-icon">
-      <CallMadeIcon />
+      <HomeIcon />
     </div>
     <div class="menu-item-label">
       <slot></slot>
@@ -54,6 +54,7 @@ onMounted(() => {
 
 .menu-item-label {
   display: block;
+  font-size: 16px;
   line-height: 1.3;
   opacity: 1;
   text-overflow: ellipsis;
