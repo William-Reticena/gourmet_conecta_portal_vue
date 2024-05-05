@@ -15,5 +15,9 @@ export default defineConfig({
       '@assets': '/src/assets',
     },
   },
-  base: '/gourmet_conecta_vue',
+  base: '/gourmet_conecta_portal_vue',
+  server: {
+    port: 3000,
+    open: true,
+  },
 })

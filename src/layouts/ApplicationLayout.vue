@@ -4,6 +4,7 @@ import Avatar from '@components/avatar/Avatar.vue'
 import Drawer from '@components/drawer/Drawer.vue'
 import Header from '@components/header/Header.vue'
 
+import AvatarImg from '@assets/imgs/avatar.jpeg'
 const isOpen = ref(false)
 </script>
 
@@ -13,7 +14,7 @@ const isOpen = ref(false)
       <div class="header-content">
         <h1>Logo</h1>
 
-        <Avatar src="/src/assets/imgs/avatar.jpeg" />
+        <Avatar :src="AvatarImg" />
       </div>
     </Header>
 

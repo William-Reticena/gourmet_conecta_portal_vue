@@ -4,10 +4,12 @@ import Box from '@components/box/Box.vue'
 import Button from '@components/button/Button.vue'
 import Card from '@components/card/Card.vue'
 import Form from '@components/form/Form.vue'
-import Img from '@components/img/Img.vue'
+import Image from '@components/img/Img.vue'
 import Input from '@components/input/Input.vue'
 import Typography from '@components/typography/Typography.vue'
 import { RouteName } from '@utils/enums'
+
+import Logo from '@assets/imgs/logo.png'
 
 const email = ref('Hello World!')
 const password = ref('')
@@ -17,7 +19,9 @@ const password = ref('')
   <Box class="login-form">
     <Card class="card-form" width="400px">
       <Box class="logo">
-        <Img src="src/assets/imgs/logo.png" alt="Logo" :width="250" border-radius="50%" />
+        <Image :src="Logo" alt="Logo" :width="250" border-radius="50%" />
+        <!-- /src/assets/imgs/logo.png -->
+        <!-- <img :src="" alt="Logo" :width="250" border-radius="50%" /> -->
       </Box>
 
       <Typography variant="h4" align="center">Entrar</Typography>

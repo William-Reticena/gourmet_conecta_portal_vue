@@ -3,6 +3,7 @@ import { useRoute } from 'vue-router'
 import { RouteName } from '@utils/enums'
 import Card from '@/components/card/Card.vue'
 
+import PratoExemplo from '@assets/imgs/prato_de_comida.jpeg'
 const {
   params: { id },
 } = useRoute()
@@ -25,7 +26,7 @@ const {
         <div @click="$router.push({ name: RouteName.HOME })">Voltar</div>
 
         <div class="img">
-          <img src="@/assets/imgs/prato_de_comida.jpeg" width="100%" height="300px" alt="" />
+          <img :src="PratoExemplo" width="100%" height="300px" alt="" />
 
           <h1>Marmita do dia</h1>
 

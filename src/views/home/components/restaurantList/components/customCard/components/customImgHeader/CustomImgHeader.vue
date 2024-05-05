@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import Box from '@components/box/Box.vue'
 import Img from '@components/img/Img.vue'
+
+import RestaurantImg from '@assets/imgs/restaurante_exemplo.jpeg'
+import RestaurantLogo from '@assets/imgs/restaurant_logo.jpeg'
 </script>
 
 <template>
   <Box class="box-content">
-    <Img src="src/assets/imgs/restaurante_exemplo.jpeg" :height="100" />
+    <Img :src="RestaurantImg" :height="100" />
 
-    <Img src="src/assets/imgs/restaurant_logo.jpeg" :height="50" class="img-logo" border-radius="8px" />
+    <Img :src="RestaurantLogo" :height="50" class="img-logo" border-radius="8px" />
   </Box>
 </template>
 
