@@ -15,4 +15,5 @@ export default defineConfig({
       '@assets': '/src/assets',
     },
   },
+  base: '/gourmet_conecta_vue',
 })
