@@ -9,7 +9,9 @@ const props = defineProps(cardProps)
 
 onMounted(() => {
   if (cardContainerRef.value) {
+    cardContainerRef.value.style.height = props.height
     cardContainerRef.value.style.maxWidth = props.maxWidth
+    cardContainerRef.value.style.width = props.width
   }
 })
 </script>

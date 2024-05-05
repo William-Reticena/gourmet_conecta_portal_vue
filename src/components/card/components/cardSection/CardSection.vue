@@ -10,4 +10,8 @@
 .card-section-container {
   padding: 1em;
 }
+
+.card-section-container:empty {
+  display: none;
+}
 </style>

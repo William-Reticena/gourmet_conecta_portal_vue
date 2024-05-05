@@ -4,7 +4,7 @@ export const ImgProps = {
     required: true,
   },
   borderRadius: {
-    type: Number,
+    type: [String, Number],
   },
   height: {
     type: Number,

@@ -21,7 +21,6 @@ defineProps(inputProps)
 <style scoped>
 .input-container {
   display: inline-block;
-  /* gap: 0.1em; */
 }
 
 .input-label {

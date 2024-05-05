@@ -12,12 +12,22 @@ defineProps(inputBaseProps)
 </template>
 
 <style scoped>
+.input-base-container {
+  width: 100%;
+}
+
 .input-base {
+  background-color: transparent;
   border: none;
+  color: inherit;
   font-family: inherit;
   min-width: 7.8125rem;
   outline: none;
   padding: 0.375rem 0;
   width: 100%;
+}
+
+.input-base::placeholder {
+  /* color: var(--color-gray-500); */
 }
 </style>

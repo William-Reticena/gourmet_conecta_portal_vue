@@ -9,7 +9,7 @@ const imgRef = ref<HTMLImageElement | null>(null)
 onMounted(() => {
   if (imgRef.value) {
     if (props.borderRadius) {
-      imgRef.value.style.borderRadius = `${props.borderRadius}px`
+      imgRef.value.style.borderRadius = String(props.borderRadius)
     }
   }
 })

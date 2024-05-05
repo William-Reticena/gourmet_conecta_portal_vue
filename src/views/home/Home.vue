@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import CustomCard from './components/CustomCard/CustomCard.vue'
+import RestaurantList from './components/restaurantList/RestaurantList.vue'
 </script>
 
 <template>
   <div class="home">
-    <CustomCard />
+    <RestaurantList />
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import CustomCard from './components/CustomCard/CustomCard.vue'
 .home {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 </style>

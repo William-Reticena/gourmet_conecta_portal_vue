@@ -21,22 +21,8 @@
 }
 
 body {
-  background: linear-gradient(
-      to right top,
-      #213555,
-      #294062,
-      #324a6f,
-      #3a567c,
-      #43618a,
-      #397199,
-      #2b82a5,
-      #1f92ad,
-      #2fa9a6,
-      #67bb95,
-      #a5ca85,
-      #e5d283
-    )
-    no-repeat fixed;
+  background: linear-gradient(to right top, #935400, #a96813, #be7c24, #d49134, #eaa644) no-repeat fixed;
+  /* background-color: #4c1501; */
 }
 
 :root {

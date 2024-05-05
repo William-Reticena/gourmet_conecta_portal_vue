@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { typographyPProps } from './props'
+import { typographyH6Props } from './props'
 
 const typographyH6Ref = ref<HTMLDivElement | null>(null)
 
-const props = defineProps(typographyPProps)
+const props = defineProps(typographyH6Props)
 
 onMounted(() => {
   if (typographyH6Ref.value) {
@@ -25,6 +25,8 @@ onMounted(() => {
 .typography-h6 {
   font-size: 1.25rem;
   font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
   margin: 0;
   word-wrap: break-word;
 }
