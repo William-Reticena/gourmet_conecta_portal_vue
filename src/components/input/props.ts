@@ -1,3 +1,5 @@
+import { PropType } from 'vue'
+
 export const inputProps = {
   label: {
     type: String,
@@ -6,5 +8,9 @@ export const inputProps = {
   placeholder: {
     type: String,
     default: '',
+  },
+  type: {
+    type: String as PropType<'text' | 'password' | 'email'>,
+    default: 'text',
   },
 }

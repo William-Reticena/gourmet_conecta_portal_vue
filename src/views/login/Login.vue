@@ -11,7 +11,7 @@ import { RouteName } from '@utils/enums'
 
 import Logo from '@assets/imgs/logo.png'
 
-const email = ref('Hello World!')
+const email = ref('')
 const password = ref('')
 </script>
 
@@ -20,16 +20,14 @@ const password = ref('')
     <Card class="card-form" width="400px">
       <Box class="logo">
         <Image :src="Logo" alt="Logo" :width="250" border-radius="50%" />
-        <!-- /src/assets/imgs/logo.png -->
-        <!-- <img :src="" alt="Logo" :width="250" border-radius="50%" /> -->
       </Box>
 
       <Typography variant="h4" align="center">Entrar</Typography>
 
       <Form @submit="$router.push({ name: RouteName.HOME })">
         <Box class="form-container">
-          <Input v-model="email" placeholder="Digite o seu e-mail" label="Teste" />
-          <Input v-model="password" placeholder="Digite a sua senha" />
+          <Input v-model="email" placeholder="Digite o seu e-mail" type="email" />
+          <Input v-model="password" placeholder="Digite a sua senha" type="password" />
 
           <Button type="submit">Entrar</Button>
         </Box>
@@ -54,12 +52,13 @@ const password = ref('')
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 </style>

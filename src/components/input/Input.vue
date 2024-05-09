@@ -11,7 +11,7 @@ defineProps(inputProps)
     <label class="input-label" for="">{{ label }}</label>
     <div class="input-wrapper">
       <!-- <div>😀</div> -->
-      <InputBase v-model="model" :placeholder="placeholder" />
+      <InputBase v-model="model" :placeholder="placeholder" :type="type" />
       <!-- <div>😛</div> -->
     </div>
     <!-- <div>errors</div> -->
@@ -29,11 +29,17 @@ defineProps(inputProps)
   margin-bottom: 0.0625rem;
 }
 
+.input-label:empty {
+  display: none;
+}
+
 .input-wrapper {
   align-items: center;
-  border: 1px solid #000;
+  background-color: rgba(30, 30, 30, 0.5);
+  border: 1px solid rgba(30, 30, 30, 0.5);
+  border-radius: 10px;
   display: flex;
   gap: 0.5rem;
-  padding: 0.25rem 0.375rem;
+  padding: 0.25rem 0.625rem;
 }
 </style>

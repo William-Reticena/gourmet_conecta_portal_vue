@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HomeIcon from '@/assets/icons/HomeFilled.vue'
 import { onMounted, ref } from 'vue'
 
 const menuItemRef = ref<HTMLDivElement | null>(null)
@@ -12,8 +11,10 @@ const observer = new ResizeObserver((entries) => {
   }
 
   if (entries[0].contentRect.width < 40) {
+    entries[0].target.children[0].classList.add('no-label')
     entries[0].target.children[1].classList.add('hidden')
   } else {
+    entries[0].target.children[0].classList.remove('no-label')
     entries[0].target.children[1].classList.remove('hidden')
   }
 })
@@ -28,7 +29,7 @@ onMounted(() => {
 <template>
   <div ref="menuItemRef" class="menu-item-container">
     <div class="menu-item-icon">
-      <HomeIcon />
+      <slot name="icon"></slot>
     </div>
     <div class="menu-item-label">
       <slot></slot>
@@ -41,15 +42,18 @@ onMounted(() => {
   align-items: center;
   cursor: pointer;
   display: flex;
-  min-height: 3rem;
+  min-height: 2.75rem;
   padding: 0.5rem 1rem;
 }
 
 .menu-item-icon {
   align-items: center;
   display: flex;
-  justify-content: center;
-  margin-right: 14px;
+  min-width: 3.5rem;
+}
+
+.menu-item-icon.no-label {
+  min-width: auto;
 }
 
 .menu-item-label {

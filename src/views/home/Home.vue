@@ -4,15 +4,24 @@ import RestaurantList from './components/restaurantList/RestaurantList.vue'
 
 <template>
   <div class="home">
-    <RestaurantList />
+    <div class="div">
+      <RestaurantList />
+    </div>
   </div>
 </template>
 
 <style scoped>
 .home {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
+  /* width: 50%; */
+}
+
+.div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 50.375rem;
 }
 </style>

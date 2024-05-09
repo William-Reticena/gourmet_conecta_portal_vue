@@ -8,7 +8,7 @@ import CustomImgHeader from './components/customImgHeader/CustomImgHeader.vue'
 </script>
 
 <template>
-  <template v-for="n in 80" :key="n">
+  <template v-for="n in 12" :key="n">
     <Card class="restaurant-card" @click="$router.push({ name: RouteName.RESTAURANT, params: { id: n } })">
       <CustomImgHeader />
 

@@ -7,7 +7,7 @@ defineProps(inputBaseProps)
 
 <template>
   <div class="input-base-container">
-    <input class="input-base" type="text" :placeholder="placeholder" v-model="model" />
+    <input class="input-base" :type="type" :placeholder="placeholder" v-model="model" />
   </div>
 </template>
 
@@ -24,10 +24,7 @@ defineProps(inputBaseProps)
   min-width: 7.8125rem;
   outline: none;
   padding: 0.375rem 0;
+  text-indent: 0.25rem;
   width: 100%;
-}
-
-.input-base::placeholder {
-  /* color: var(--color-gray-500); */
 }
 </style>

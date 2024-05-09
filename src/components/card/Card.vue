@@ -35,6 +35,5 @@ onMounted(() => {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
-  width: fit-content;
 }
 </style>

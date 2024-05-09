@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUpdated, ref } from 'vue'
 import { drawerProps } from './props'
-import MenuItem from '../menuItem/MenuItem.vue'
 
 const drawerRef = ref<HTMLDivElement | null>(null)
 
@@ -41,9 +40,7 @@ onUpdated(() => {
 
 <template>
   <div ref="drawerRef" class="drawer-container" tabindex="-1">
-    <MenuItem> Início </MenuItem>
-    <MenuItem> Meus pedidos </MenuItem>
-    <MenuItem> Meu perfil </MenuItem>
+    <slot></slot>
   </div>
 </template>
 
@@ -60,6 +57,10 @@ onUpdated(() => {
   transition: width var(--animation-duration);
   width: 15.625rem;
   z-index: 1000;
+}
+
+.drawer-container:first-child {
+  margin-top: 50px;
 }
 
 .side-left {

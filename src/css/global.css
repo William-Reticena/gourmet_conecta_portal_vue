@@ -3,9 +3,12 @@
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
+  text-shadow: 0 2px 4px rgba(3, 10, 39, 0.36);
 
   /* color-scheme: dark; */
-  color: #ffffff;
+  color: var(--color-text);
+  /* color: #161a1d; */
+  /* color: #161a1d; */
   /* background-color: #242424; */
 
   font-synthesis: none;
@@ -21,8 +24,13 @@
 }
 
 body {
-  background: linear-gradient(to right top, #935400, #a96813, #be7c24, #d49134, #eaa644) no-repeat fixed;
+  /* background: linear-gradient(to right top, #935400, #a96813, #be7c24, #d49134, #eaa644) no-repeat fixed; */
+  background: fixed url('@assets/imgs/app_background.jpg') no-repeat center / cover;
+  /* background-size: cover; */
   /* background-color: #4c1501; */
+  /* background-color: #c45353; */
+
+  min-height: 100vh;
 }
 
 :root {
